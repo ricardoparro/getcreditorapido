@@ -1,0 +1,49 @@
+/*Sections style*/
+/* / Partners*/
+#partners .swiper-slide img{
+    width: auto;
+    height: 100%;
+}
+/*Fixed Top Quotation*/
+#fixed label{
+    font-size: 1.1em !important;
+}
+#fixed .selectric .label{
+    font-size: .85em;
+    padding: 0 0 0 4%;
+}
+#fixed input.text{
+    font-size: .8em;
+}
+#fixed input.submit{
+    font-size: .85em;
+}
+@media screen and (max-width: 725px){
+	#fixed .selectric .label{
+		font-size: .8em;
+		padding: 0 0 0 7%;
+	}
+}
+@media screen and (max-width: 720px){
+	#fixed input.submit{
+    	font-size: .8em;
+	}
+}
+@media screen and (max-width: 700px){
+	#fixed .selectric .label{
+		padding: 0 0 0 4%;
+	}
+}
+@media screen and (max-width: 675px){
+	#fixed .selectric .label{
+		padding: 0 0 0 3%;
+	}
+}
+@media screen and (max-width: 685px){
+	#fixed input.submit{
+    	font-size: .75em;
+	}
+}
+#mockup-wrapper .mockup{
+    font-size: .8em;
+}

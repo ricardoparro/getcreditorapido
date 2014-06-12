@@ -1,0 +1,37 @@
+extends ../layouts/default
+
+block content
+	section#fixed
+		.wrapper
+			h2 Simule aqui seu seguro viagem
+			form(action='', method='post')
+				ul.clearfix
+					li
+						label Destino
+						#mockup-wrapper
+							.mockup
+								| Selecionar cidade
+								span
+									select
+										option Selecionar cidade
+										option Brasília
+										option Porto Alegre
+										option São Paulo
+										option Brasília
+										option Porto Alegre
+										option São Paulo
+										option Brasília
+										option Porto Alegre
+										option São Paulo
+					li
+						label Data ida
+						input.text.calendar(type='text', value='dd/mm/aaaa')
+					li
+						label Data volta
+						input.text.calendar(type='text', value='dd/mm/aaaa')
+					li
+						label Email de contato
+						input.text(type='email')
+					li
+						label.empty .
+						input.submit(type='submit', value='Ver Cotações')

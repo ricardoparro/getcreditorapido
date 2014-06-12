@@ -1,0 +1,81 @@
+include ../mixins/flash-messages
+
+doctype html
+html
+
+	//- HTML HEADER
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		//- meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		title= title || 'getcredito'
+		link(rel="shortcut icon", href="/favicon.ico", type="image/x-icon")
+		//- Customise the stylesheet for your site by editing /public/styles/site.less
+		//- All .less files will be automatically compiled and minified in production.
+
+		link(href="/styles/site/reset.css", rel="stylesheet")
+		link(href="/styles/site/style.css", rel="stylesheet")
+		link(rel='stylesheet', media='screen and (max-width: 767px)', href='/styles/site/tablet.css')
+		link(rel='stylesheet', media='screen and (max-width: 640px)', href='/styles/site/mobile.css')
+		link(rel='stylesheet', href='/styles/site/datepicker/jquery-ui.min.css')
+		link(rel='stylesheet', href='/styles/site/datepicker/jquery.ui.core.min.css')
+		link(rel='stylesheet', href='/styles/site/datepicker/jquery.ui.datepicker.min.css')
+		link(rel='stylesheet', href='/styles/site/datepicker/jquery.ui.theme.min.css')
+		//- This file provides the default styling for the KeystoneJS Content Editor
+		if user && user.canAccessKeystone
+			link(href="/keystone/styles/content/editor.min.css", rel="stylesheet")
+
+		//- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8
+		//-[if lt IE 9]
+			script(src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js")
+			script(src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js")
+		//-[endif]
+
+		//- Include template-specific stylesheets by extending the css block
+		block css
+
+		//- Add any other template-specific HEAD tags by extending the head block
+		block head
+
+	//- HTML BODY
+	body
+
+
+		//- The content block should contain the body of your template's content
+		block content
+
+
+		//- FOOTER
+		.container: #footer
+
+			.wrapper
+				ul
+					li
+						img(src='images/logo-mobile@2x.png')
+						li.desktop © 2014 - Get. Todos os direitos reservados.
+						li.mobile
+							| © 2014 - Get.
+							br
+							| Todos os direitos reservados.
+
+			//- JAVASCRIPT
+
+			//- jQuery 1.11.0 is included by default, and required by both Bootstrap
+			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+			//- you can upgrade to 2.1.0 (also bundled) for better performance.
+			script(src='/js/lib/jquery/jquery-1.11.0.min.js')
+
+			//- Customise which Bootstrap javascript files are served by including
+			//- them specifically here, instead of bootstrap-3.1.0.min.js
+			script(src='/js/lib/bootstrap/bootstrap-3.1.0.min.js')
+
+			//- The KeystoneJS Content Editor provides support for ks-editable data attributes,
+			//- which generate links to edit content for users who can access Keystone
+			if user && user.canAccessKeystone
+				script(src='/keystone/js/content/editor.js')
+
+			//- Add scripts that are globally required by your site here.
+
+			//- Include template-specific javascript files by extending the js block
+			block js
