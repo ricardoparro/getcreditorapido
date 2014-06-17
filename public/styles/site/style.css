@@ -406,11 +406,11 @@ header form input:focus {
 header form li:nth-child(2) input,
 header form li:nth-child(3) input {
     width: 110px;
-    background: #fff url(../images/calendar.png) no-repeat 94% 12px;
+    background: #fff url(../../images/calendar.png) no-repeat 94% 12px;
 }
 #fixed li:nth-child(2) input,
 #fixed li:nth-child(3) input {
-    background: #fff url(../images/calendar.png) no-repeat 94% 12px;
+    background: #fff url(../../images/calendar.png) no-repeat 94% 12px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
@@ -421,7 +421,7 @@ only screen and (min-resolution: 1.5dppx) {
 	header form li:nth-child(3) input,
 	#fixed li:nth-child(2) input,
 	#fixed li:nth-child(3) input {
-    background-image: url(../images/calendar@15x.png);
+    background-image: url(../../images/calendar@15x.png);
     background-size: 14px 15px;
 }
 }
@@ -434,7 +434,7 @@ only screen and (min-resolution: 2dppx) {
 	header form li:nth-child(3) input,
 	#fixed li:nth-child(2) input,
 	#fixed li:nth-child(3) input {
-    background-image: url(../images/calendar@2x.png);
+    background-image: url(../../images/calendar@2x.png);
     background-size: 14px 15px;
 }
 }
@@ -447,7 +447,7 @@ header form li:nth-child(4) input {
 header form input.submit,
 #fixed input.submit {
     width: 100%;
-    background: #8CBC00 url(../images/cta-arrow2.png) no-repeat 90% center;
+    background: #8CBC00 url(../../images/cta-arrow2.png) no-repeat 90% center;
     text-align: left;
     color: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.7);
@@ -469,7 +469,7 @@ only screen and (min-resolution: 144dpi),
 only screen and (min-resolution: 1.5dppx) {
 #fixed input.submit,
 	header form input.submit {
-    background-image: url(../images/cta-arrow2@15x.png);
+    background-image: url(../../images/cta-arrow2@15x.png);
     background-size: 13px 21px;
 }
 }
@@ -480,7 +480,7 @@ only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
 	#fixed input.submit,
 	header form input.submit {
-    background-image: url(../images/cta-arrow2@2x.png);
+    background-image: url(../../images/cta-arrow2@2x.png);
     background-size: 13px 21px;
 }
 }
@@ -550,7 +550,7 @@ section {
     margin: 0 0 16px;
 }
 #opinions .swiper-slide ul ul li {
-    background: url(../images/star.png) no-repeat;
+    background: url(../../images/star.png) no-repeat;
     display: inline-block;
     width: 30px;
     height: 29px;
@@ -562,7 +562,7 @@ only screen and (-o-min-device-pixel-ratio: 1.5 / 1),
 only screen and (min-resolution: 144dpi),
 only screen and (min-resolution: 1.5dppx) {
 #opinions .swiper-slide ul ul li {
-    background-image: url(../images/star@15x.png);
+    background-image: url(../../images/star@15x.png);
     background-size: 30px 29px;
 }
 }
@@ -572,7 +572,7 @@ only screen and (-o-min-device-pixel-ratio: 2 / 1),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
 #opinions .swiper-slide ul ul li {
-    background-image: url(../images/star@2x.png);
+    background-image: url(../../images/star@2x.png);
     background-size: 30px 29px;
 }
 }
@@ -620,7 +620,7 @@ only screen and (min-resolution: 2dppx) {
     margin: 0;
 }
 #howitworks .wrapper .item span {
-    background: url(../images/numbers.png) no-repeat;
+    background: url(../../images/numbers.png) no-repeat;
     display: block;
     width: 46px;
     height: 46px;
@@ -633,7 +633,7 @@ only screen and (-o-min-device-pixel-ratio: 1.5 / 1),
 only screen and (min-resolution: 144dpi),
 only screen and (min-resolution: 1.5dppx) {
 #howitworks .wrapper .item span {
-    background-image: url(../images/numbers@15x.png);
+    background-image: url(../../images/numbers@15x.png);
     background-size: 138px 46px;
 }
 }
@@ -643,7 +643,7 @@ only screen and (-o-min-device-pixel-ratio: 2 / 1),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
 #howitworks .wrapper .item span {
-    background-image: url(../images/numbers@2x.png);
+    background-image: url(../../images/numbers@2x.png);
     background-size: 138px 46px;
 }
 }
@@ -696,7 +696,7 @@ only screen and (min-resolution: 2dppx) {
 }
 #informations .tabs li.selected span {
     position: absolute;
-    background: url(../images/tab-arrow.png) no-repeat right center;
+    background: url(../../images/tab-arrow.png) no-repeat right center;
     display: block;
     width: 21px;
     height: 100%;
@@ -709,7 +709,7 @@ only screen and (-o-min-device-pixel-ratio: 1.5 / 1),
 only screen and (min-resolution: 144dpi),
 only screen and (min-resolution: 1.5dppx) {
 #informations .tabs li.selected span {
-    background-image: url(../images/tab-arrow@15x.png);
+    background-image: url(../../images/tab-arrow@15x.png);
     background-size: 21px 148px;
 }
 }
@@ -719,7 +719,7 @@ only screen and (-o-min-device-pixel-ratio: 2 / 1),
 only screen and (min-resolution: 192dpi),
 only screen and (min-resolution: 2dppx) {
 #informations .tabs li.selected span {
-    background-image: url(../images/tab-arrow@2x.png);
+    background-image: url(../../images/tab-arrow@2x.png);
     background-size: 21px 148px;
 }
 }
@@ -727,12 +727,12 @@ only screen and (min-resolution: 2dppx) {
     color: #1F1F2C;
 }
 #informations .tabs .selected a {
-    background: url(../images/tab-active.png) left top repeat-y;
+    background: url(../../images/tab-active.png) left top repeat-y;
     color: #1F1F2C;
 }
 #informations .tabcontents {
     padding: 30px 5%;
-    background: #fff url(../images/tab-content-bg.png) left top repeat-y;
+    background: #fff url(../../images/tab-content-bg.png) left top repeat-y;
     float: left;
     width: 66.39%;
 }
