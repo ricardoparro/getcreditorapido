@@ -3,7 +3,7 @@ extends ../layouts/default
 block content
 	section#fixed
 		.wrapper
-			h2 Simule aqui seu seguro viagem
+			h2= data.post.title
 			form(action='', method='post')
 				ul.clearfix
 					li
@@ -39,30 +39,16 @@ block content
 		.wrapper
 			.logo
 				h1 Get
-				p Seguro Viagem
+				p= data.post.tagline
 			aside
-				h2 Simule aqui seu seguro viagem
+				h2= data.post.heading
 				form(action='', method='post')
 					ul
 						li
-							label Destino
-							#mockup-wrapper
-								.mockup
-									small Selecionar cidade
-									span
-								select
-									option Selecionar cidade
-									option Brasília
-									option Porto Alegre
-									option São Paulo
-									option Brasília
-									option Porto Alegre
-									option São Paulo
-									option Brasília
-									option Porto Alegre
-									option São Paulo
+							label Valor
+							input.text(type='text')
 						li
-							label Data ida
+							label Data salario
 							input.text.desktop.calendar(type='text', value='dd/mm/aaaa')
 							input.text.mobile(type='date', value='dd/mm/aaaa')
 						li
