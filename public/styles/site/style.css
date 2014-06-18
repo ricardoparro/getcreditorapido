@@ -127,11 +127,11 @@ header form li {
     margin: 0 0 10px;
 }
 header form > ul > li:nth-child(2) {
-    width: 124px;
+    width: 243px;
     margin-right: 12px;
 }
 header form > ul > li:nth-child(3) {
-    width: 124px;
+    width: 243px;
 }
 header form > ul > li:last-child {
     margin: 0;
@@ -403,13 +403,11 @@ header form input:focus {
     -webkit-box-shadow: inset 0 0 0 2px #97C400;
     box-shadow: inset 0 0 0 2px #97C400;
 }
-header form li:nth-child(2) input,
-header form li:nth-child(3) input {
+header form li:nth-child(2) input {
     width: 110px;
     background: #fff url(../../images/calendar.png) no-repeat 94% 12px;
 }
-#fixed li:nth-child(2) input,
-#fixed li:nth-child(3) input {
+#fixed li:nth-child(2) input{
     background: #fff url(../../images/calendar.png) no-repeat 94% 12px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
