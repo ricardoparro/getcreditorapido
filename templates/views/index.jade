@@ -3,38 +3,21 @@ extends ../layouts/default
 block content
 	section#fixed
 		.wrapper
-			h2= data.post.title
+			h2 Faça aqui a sua simulação
 			form(action='', method='post')
 				ul.clearfix
 					li
-						label Destino
-						#mockup-wrapper
-							.mockup
-								| Selecionar cidade
-								span
-							select
-								option Selecionar cidade
-								option Brasília
-								option Porto Alegre
-								option São Paulo
-								option Brasília
-								option Porto Alegre
-								option São Paulo
-								option Brasília
-								option Porto Alegre
-								option São Paulo
+						label=data.post.valueLoanLabel
+						input.text(type='text')
 					li
-						label Data ida
-						input.text.calendar(type='text', value='dd/mm/aaaa')
+						label=data.post.numberOfMoths
+						input.text(type='text')
 					li
-						label Data volta
-						input.text.calendar(type='text', value='dd/mm/aaaa')
-					li
-						label Email de contato
+						label=data.post.emailLabel
 						input.text(type='email')
 					li
 						label.empty .
-						input.submit(type='submit', value='Ver Cotações')
+						input.submit(type='submit', value=data.post.callToActionLabel)
 	header#quotation(name='quotation', itemscope='', itemtype='http://schema.org/Product')
 		.wrapper
 			.logo
@@ -45,35 +28,30 @@ block content
 				form(action='', method='post')
 					ul
 						li
-							label Valor
+							label=data.post.valueLoanLabel
 							input.text(type='text')
 						li
-							label Data de pagamento salarial
-							input.text.desktop.calendar(type='text', value='dd/mm/aaaa')
-							input.text.mobile(type='date', value='dd/mm/aaaa')
+							label=data.post.numberOfMoths
+							input.text(type='text')
 						li
-							label Email de contato
+							label=data.post.emailLabel
 							input.text(type='email')
 						li
-							input.submit(type='submit', value='Ver Cotações')
+							input.submit(type='submit', value=data.post.callToActionLabel)
 
 	main
 		section#partners
 			.wrapper.clearfix
-				h2 Parceiros
+				h2=data.post.headingParceiros
 				.swiper-container
 					ul#slides.swiper-wrapper
-						li.swiper-slide
-							img(src='images/partners/premium-assistance.jpg', alt='Premium Assistance')
-						li.swiper-slide
-							img(src='images/partners/assist-card.jpg', alt='Assist Card')
-						li.swiper-slide
-							img(src='images/partners/travel-ace.jpg', alt='Travel Ace')
-						li.swiper-slide
-							img(src='images/partners/vital-card.jpg', alt='Vital Card')
+						each par, par_i in data.post.partners
+							li.swiper-slide
+								img(src= par.image.secure_url , alt= par.name)
+						
 		section#opinions
 			.wrapper
-				h2.desktop Opiniões Sobre a Get
+				h2.desktop=data.post.headingOpinions
 				h2.mobile
 					| Opiniões
 					br
@@ -194,7 +172,7 @@ block content
 				.inner Ver Cotações
 		section#howitworks
 			.wrapper
-				h2 Como funciona?
+				h2=data.post.headingHowItWorks
 				.item
 					span 1
 					.icon
@@ -206,7 +184,7 @@ block content
 					span 2
 					.icon
 						img(src='images/icon-two.png')
-					h3 Obtenha as cotações
+					h3 Faça aqui a sua simulação
 					p
 						| Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas.
 				.item
@@ -223,7 +201,7 @@ block content
 					.inner Ver Cotações
 		section#informations
 			.wrapper
-				h2 Informações Adicionais
+				h2=data.post.headingAdditionalInfo
 				.infobox
 					ul.tabs.desktop
 						li.selected
