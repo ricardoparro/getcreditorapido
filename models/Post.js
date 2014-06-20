@@ -24,6 +24,7 @@ Post.add({
 	headingHowItWorks:{type:String},
 	headingAdditionalInfo:{type:String},
 	partners: { type: Types.Relationship, ref: 'Partner', many: true },
+	testimonials: { type: Types.Relationship, ref: 'Testimonial', many: true}, 
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
 	image: { type: Types.CloudinaryImage },
