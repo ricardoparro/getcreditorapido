@@ -95,41 +95,38 @@ block content
 					span 1
 					.icon
 						img(src='images/icon-one.png')
-					h3 Preencha o formulário
-					p
-						| Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas.
+					h3=data.post.howItWorksFirstTitle
+					p=data.post.howItWorksFirstDescription
 				.item
 					span 2
 					.icon
 						img(src='images/icon-two.png')
-					h3 Faça aqui a sua simulação
-					p
-						| Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas.
+					h3=data.post.howItWorksSecondTitle
+					p=data.post.howItWorksSecondDescription
 				.item
 					span 3
 					.icon
 						img(src='images/icon-three.png')
-					h3
-						| Feche
+					h3=data.post.howItWorksThirdTitleFirstLine
 						br
-						| Online
-					p
-						| Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas.
+						|#{data.post.howItWorksThirdTitleSecondLine}
+						
+					p=data.post.howItWorksThirdDescription
 				a#cta.ancora(href='#quotation')
 					.inner Ver Cotações
 		section#informations
 			.wrapper
-				h2=data.post.headingAdditionalInfo
+				h2=data.post.additionalInfoHeading
 				.infobox
 					ul.tabs.desktop
 						li.selected
-							a.first(href='', rel='view-first') Lorem ipsum
+							a.first(href='', rel='view-first')=data.post.additionalInfoFirstTabLabel
 							span
 						li
-							a.second(href='', rel='view-second') Facebook
+							a.second(href='', rel='view-second')=data.post.additionalInfoSecondTabLabel
 							span
 						li
-							a.third(href='', rel='view-third') Twitter
+							a.third(href='', rel='view-third')=data.post.additionalInfoThirdTabLabel
 							span
 					ul.tabs.mobile
 						li.selected
@@ -143,22 +140,13 @@ block content
 							span
 					.tabcontents.clearfix
 						#view-first.tabcontent
-							h3 First
-							p
-								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
-							p
-								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+							h3=data.post.additionalInfoFirstTabTitle
+							#{data.post.additionalInfoFirstTabContent}
 						#view-second.tabcontent
-							h3 Second
-							p
-								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
-							p
-								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+							h3=data.post.additionalInfoSecondTabTitle
+							#{data.post.additionalInfoSecondTabContent}
 						#view-third.tabcontent
-							h3 Third
-							p
-								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
-							p
-								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+							h3=data.post.additionalInfoThirdTabTitle
+							#{data.post.additionalInfoThirdTabContent}
 			a#cta.ancora(href='#quotation')
 				.inner Ver Cotações

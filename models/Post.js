@@ -22,9 +22,33 @@ Post.add({
 	headingParceiros:{type:String},
 	headingOpinions:{type:String},
 	headingHowItWorks:{type:String},
-	headingAdditionalInfo:{type:String},
+	
 	partners: { type: Types.Relationship, ref: 'Partner', many: true },
 	testimonials: { type: Types.Relationship, ref: 'Testimonial', many: true}, 
+	howItWorksFirstTitle: {type:String},
+	howItWorksFirstDescription: {type:String},
+	howItWorksSecondTitle: {type:String},
+	howItWorksSecondDescription: {type:String},
+	howItWorksThirdTitleFirstLine: {type:String},
+	howItWorksThirdTitleSecondLine: {type:String},
+	howItWorksThirdDescription: {type:String},
+	
+	//Additional Info section
+	additionalInfoHeading:{type:String},
+
+	additionalInfoFirstTabLabel: {type:String},
+	additionalInfoFirstTabTitle: {type:String},
+	additionalInfoFirstTabContent: {type: Types.Html, wysiwyg: false, height: 150 },
+	
+	additionalInfoSecondTabLabel: {type:String},
+	additionalInfoSecondTabTitle: {type:String},
+	additionalInfoSecondTabContent: {type: Types.Html, wysiwyg: false, height: 150 },
+
+	additionalInfoThirdTabLabel: {type:String},
+	additionalInfoThirdTabTitle: {type:String},
+	additionalInfoThirdTabContent: {type: Types.Html, wysiwyg: false, height: 150 },
+
+
 	state: { type: Types.Select, options: 'draft, published, archived', default: 'draft', index: true },
 	publishedDate: { type: Types.Date, index: true, dependsOn: { state: 'published' } },
 	image: { type: Types.CloudinaryImage },
