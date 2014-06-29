@@ -4,7 +4,7 @@ block content
 	section#fixed
 		.wrapper
 			h2 Faça aqui a sua simulação
-			form(action='', method='post', , id='formHead')
+			form(action='', method='post', id='formHead')
 				ul.clearfix
 					li
 						label Valor do empréstimo
@@ -29,15 +29,15 @@ block content
 					ul
 						li
 							label Valor do empréstimo
-							input.text(type='text')
+							input.text(type='text' name='amount')
 						li
 							label Prazo de quitação (meses)
-							input.text(type='text')
+							input.text(type='text', name='repayDate')
 						li
 							label Email de contato
-							input.text(type='email')
+							input.text(type='email', name='email')
 						li
-							input.submit(type='submit', value='Ver Simulação')
+							input.submit(type='submit', value='Ver Simulação', onclick='SaveLeadPage();return false;')
 
 	main
 		section#partners

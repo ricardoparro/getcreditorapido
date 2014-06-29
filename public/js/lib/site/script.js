@@ -240,3 +240,15 @@ function SaveLeadHead(){
 
 	});
 }
+
+function SaveLeadPage(){
+
+	
+	$.post('/SaveLead', $('#formPage').serializeObject(), function(success){
+
+		if(success){
+			alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
+		}
+
+	});
+}
