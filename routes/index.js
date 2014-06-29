@@ -36,8 +36,23 @@ var routes = {
 exports = module.exports = function(app) {
 	
 	// Views
-	app.get('/', routes.views.index);
+	app.get('/', routes.views.home);
 	app.get('/:post', routes.views.index);
+	app.post('/saveLead', function(request, response){
+
+		console.log(request);
+
+		var Firebase = require('firebase');
+		var myRootRef = new Firebase('https://getcredito-dev.firebaseio.com/');
+		
+		var data = {amount: request.body.amount, repayDate: request.body.repayDate, email: request.body.email};
+		var id = myRootRef.push().name(); // generate a unique id based on timestamp
+		
+		myRootRef.child(id).set(data);
+
+     response.send(true); 
+
+});
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	

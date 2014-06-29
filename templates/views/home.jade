@@ -1,0 +1,253 @@
+extends ../layouts/default
+
+block content
+	section#fixed
+		.wrapper
+			h2 Faça aqui a sua simulação
+			form(action='', method='post', , id='formHead')
+				ul.clearfix
+					li
+						label Valor do empréstimo
+						input.text(type='text', name='amount')
+					li
+						label Prazo de quitação (meses)
+						input.text(type='text', name='repayDate')
+					li
+						label Email de contato
+						input.text(type='email', name='email')
+					li
+						label.empty .
+						input.submit(type='submit', value='Ver Simulação', onclick='SaveLeadHead();return false;')
+	header#quotation(name='quotation', itemscope='', itemtype='http://schema.org/Product')
+		.wrapper
+			.logo
+				h1 Get
+				p CREDITO RAPIDO
+			aside
+				h2 Obtenha credito rapido
+				form(action='', method='post', id='formPage')
+					ul
+						li
+							label Valor do empréstimo
+							input.text(type='text')
+						li
+							label Prazo de quitação (meses)
+							input.text(type='text')
+						li
+							label Email de contato
+							input.text(type='email')
+						li
+							input.submit(type='submit', value='Ver Simulação')
+
+	main
+		section#partners
+			.wrapper.clearfix
+				h2 Parceiros
+				.swiper-container
+					ul#slides.swiper-wrapper
+						li.swiper-slide
+							img(src='images/partners/premium-assistance.jpg', alt='Premium Assistance')
+						li.swiper-slide
+							img(src='images/partners/assist-card.jpg', alt='Assist Card')
+						li.swiper-slide
+							img(src='images/partners/travel-ace.jpg', alt='Travel Ace')
+						li.swiper-slide
+							img(src='images/partners/vital-card.jpg', alt='Vital Card')
+						
+		section#opinions
+			.wrapper
+				h2.desktop Opiniões Sobre a Get
+				h2.mobile
+					| Opiniões
+					br
+					| Sobre a Get
+				.ghost .
+				.swiper-container.clearfix
+					ul#slides.swiper-wrapper.clearfix
+						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
+							ul.outer.clearfix
+								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
+									ul.inner.clearfix
+										li 1
+										li 2
+										li 3
+										li 4
+										li(itemprop='ratingValue') 5
+										meta(itemprop='worstRating', content='1')
+										meta(itemprop='bestRating', content='5')
+								li(itemprop='author')
+									h4 Tiago Souza
+								li(itemprop='contentLocation')
+									h5 São Paulo / SP
+								li(itemprop='description')
+									p
+										| “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
+						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
+							ul.outer.clearfix
+								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
+								ul.inner.clearfix
+									li 1
+									li 2
+									li 3
+									li 4
+									li(itemprop='ratingValue') 5
+									meta(itemprop='worstRating', content='1')
+									meta(itemprop='bestRating', content='5')
+								li(itemprop='author')
+									h4 Tiago Souza
+								li(itemprop='contentLocation')
+									h5 São Paulo / SP
+								li(itemprop='description')
+									p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
+						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
+							ul.outer.clearfix
+								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
+									ul.inner.clearfix
+										li 1
+										li 2
+										li 3
+										li(itemprop='ratingValue') 4
+										meta(itemprop='worstRating', content='1')
+										meta(itemprop='bestRating', content='5')
+								li(itemprop='author')
+									h4 Tiago Souza
+								li(itemprop='contentLocation')
+									h5 São Paulo / SP
+								li(itemprop='description')
+									p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
+						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
+							ul.outer.clearfix
+								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
+									ul.inner.clearfix
+										li 1
+										li 2
+										li 3
+										li 4
+										li(itemprop='ratingValue') 5
+										meta(itemprop='worstRating', content='1')
+										meta(itemprop='bestRating', content='5')
+								li(itemprop='author')
+									h4 Tiago Souza
+								li(itemprop='contentLocation')
+									h5 São Paulo / SP
+								li(itemprop='description')
+									p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
+						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
+							ul.outer.clearfix
+								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
+									ul.inner.clearfix
+										li 1
+										li 2
+										li 3
+										li 4
+										li(itemprop='ratingValue') 5
+										meta(itemprop='worstRating', content='1')
+										meta(itemprop='bestRating', content='5')
+								li(itemprop='author')
+									h4 Tiago Souza
+								li(itemprop='contentLocation')
+									h5 São Paulo / SP
+								li(itemprop='description')
+									p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
+
+						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
+									ul.outer.clearfix
+										li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
+											ul.inner.clearfix
+												li 1
+												li 2
+												li 3
+												li 4
+												li(itemprop='ratingValue') 5
+												meta(itemprop='worstRating', content='1')
+												meta(itemprop='bestRating', content='5')
+										li(itemprop='author')
+											h4 Tiago Souza
+										li(itemprop='contentLocation')
+											h5 São Paulo / SP
+										li(itemprop='description')
+											p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
+				.media(itemprop='aggregateRating', itemscope='', itemtype='http://schema.org/AggregateRating')
+					| Média de
+					span(itemprop='ratingValue') 4.5
+						| estrelas num total de
+					span(itemprop='reviewCount') 22
+						| opiniões.
+			a#cta.ancora(href='#quotation')
+				.inner Ver Cotações
+		section#howitworks
+			.wrapper
+				h2 Como funciona?
+				.item
+					span 1
+					.icon
+						img(src='images/icon-one.png')
+					h3 Preencha o formulário
+					p
+						| Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas.
+				.item
+					span 2
+					.icon
+						img(src='images/icon-two.png')
+					h3 Obtenha as cotações
+					p
+						| Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas.
+				.item
+					span 3
+					.icon
+						img(src='images/icon-three.png')
+					h3
+						| Feche
+						br
+						| Online
+					p
+						| Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas.
+
+				a#cta.ancora(href='#quotation')
+					.inner Ver Cotações
+		section#informations
+			.wrapper
+				h2 Informações Adicionais
+				.infobox
+					ul.tabs.desktop
+						li.selected
+							a.first(href='', rel='view-first') Lorem ipsum
+							span
+						li
+							a.second(href='', rel='view-second') Facebook
+							span
+						li
+							a.third(href='', rel='view-third') Twitter
+							span
+					ul.tabs.mobile
+						li.selected
+							a.first(href='', rel='view-first') 1
+							span
+						li
+							a.second(href='', rel='view-second') 2
+							span
+						li
+							a.third(href='', rel='view-third') 3
+							span
+					.tabcontents.clearfix
+						#view-first.tabcontent
+							h3 First
+							p
+								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+							p
+								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+						#view-second.tabcontent
+							h3 Second
+							p
+								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+							p
+								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+						#view-third.tabcontent
+							h3 Third
+							p
+								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+							p
+								| Lorem ipsum é um texto padrão em latim. Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.
+
+			a#cta.ancora(href='#quotation')
+				.inner Ver Cotações

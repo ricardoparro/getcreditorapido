@@ -210,3 +210,33 @@ jQuery.fn.ancoraAnimada = function(settings) {
 $(document).ready(function() {
     $(".ancora").ancoraAnimada();
 });
+
+
+$.fn.serializeObject = function()
+{
+   var o = {};
+   var a = this.serializeArray();
+   $.each(a, function() {
+       if (o[this.name]) {
+           if (!o[this.name].push) {
+               o[this.name] = [o[this.name]];
+           }
+           o[this.name].push(this.value || '');
+       } else {
+           o[this.name] = this.value || '';
+       }
+   });
+   return o;
+};
+
+function SaveLeadHead(){
+
+	
+	$.post('/SaveLead', $('#formHead').serializeObject(), function(success){
+
+		if(success){
+			alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
+		}
+
+	});
+}
