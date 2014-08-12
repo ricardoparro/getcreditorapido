@@ -57,7 +57,7 @@ header {
 }
 header .logo {
     float: left;
-    margin: 20px 0 63px;
+    margin: 20px 0 35px;
 }
 header h1 {
     background: url(../../images/logo.png) no-repeat 0 0;
