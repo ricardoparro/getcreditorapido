@@ -117,8 +117,7 @@ block content
 										li 3
 										li 4
 										li(itemprop='rating') 5
-											meta(itemprop='worstRating', content='1')
-										meta(itemprop='bestRating', content='5')
+											
 								li(itemprop='reviewer')
 									h4 Paulo Emerson
 								li(itemprop='contentLocation')
@@ -128,13 +127,15 @@ block content
 										| “O meu carro quebrou no final do mês. Na get encontrei o serviço ideal para obter crédito rápiso e conseguir o arranjo do carro.”
 								li(itemprop='itemreviewed' style='display:none')
 									p Get Crédito Rápido
-
 						.media
 					| Média de
-					span 4.5
-						| estrelas num total de
-					span 22
-						| opiniões.
+					span(itemscope='' itemtype='http://data-vocabulary.org/Review-aggregate')
+						span(itemprop='rating' itemscope='' itemtype='http://data-vocabulary.org/Rating')
+							span(itemprop='average') 5
+								| estrelas num total de
+							span(itemprop='count') 3
+									| opiniões.
+							span(itemprop='best' style='display:none') 5
 			a#cta.ancora(href='#quotation')
 				.inner Ver Cotações
 		section#howitworks
