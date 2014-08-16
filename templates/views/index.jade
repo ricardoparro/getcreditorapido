@@ -79,18 +79,17 @@ block content
 									li(itemprop='contentLocation')
 										h5=test.location
 									li(itemprop='summary')
-										p=test.testimony
+										p=test.testemony
 									li(itemprop='itemreviewed' style='display:none')
 										p Get Crédito Rápido
-							.media
+					.media(itemscope='' itemtype='http://data-vocabulary.org/Review-aggregate')
 						| Média de
-						span(itemscope='' itemtype='http://data-vocabulary.org/Review-aggregate')
-							span(itemprop='rating' itemscope='' itemtype='http://data-vocabulary.org/Rating')
-								span(itemprop='average') 5
-									| estrelas num total de
-								span(itemprop='count') data.post.testimonials.count
+						span(itemprop='rating' itemscope='' itemtype='http://data-vocabulary.org/Rating')
+							span(itemprop='average') 5
+								| estrelas num total de
+							span(itemprop='count')=data.post.testimonials.lenght
 									| opiniões.
-								span(itemprop='best' style='display:none') 5
+							span(itemprop='best' style='display:none') 5
 			a#cta.ancora(href='#quotation')
 				.inner Ver Cotações
 		section#howitworks
