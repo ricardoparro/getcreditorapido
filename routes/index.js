@@ -40,9 +40,7 @@ exports = module.exports = function(app) {
 	app.get('/:post', routes.views.index);
 	app.post('/saveLead', function(request, response){
 
-		console.log(request);
-
-		var Firebase = requfirebasire('firebase');
+		var Firebase = require('firebase');
 		var myRootRef = new Firebase('https://getcredito-dev.firebaseio.com/');
 		
 		var data = {amount: request.body.amount, repayDate: request.body.repayDate, email: request.body.email};
