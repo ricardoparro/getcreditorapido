@@ -8,7 +8,7 @@ block content
 				ul.clearfix
 					li
 						label Valor do empréstimo
-						input.text(type='text', name='amount')
+						input.text(type='text', name='amount', id='amount')
 					li
 						label Prazo de quitação (meses)
 						input.text(type='text', name='repayDate')
@@ -18,13 +18,13 @@ block content
 					li
 						label.empty .
 						input.submit(type='submit', value='Ver Simulação', onclick='SaveLeadHead();return false;')
-	header#quotation(name='quotation', itemscope='', itemtype='http://schema.org/Product')
+	header#quotation(name='quotation')
 		.wrapper
 			.logo
-				h1 Get
-				p CRÉDITO RAPIDO
+				h1(itemprop='brand') Get
+				p(itemprop='category') CRÉDITO RAPIDO
 			aside
-				h2 Obtenha crédito rápido
+				h2(description='category') Obtenha crédito rápido
 				form(action='', method='post', id='formPage')
 					ul
 						li
@@ -68,114 +68,29 @@ block content
 				.ghost .
 				.swiper-container.clearfix
 					ul#slides.swiper-wrapper.clearfix
-						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
+						li.swiper-slide(itemscope='', itemtype='http://data-vocabulary.org/Review')
 							ul.outer.clearfix
-								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
+								li
 									ul.inner.clearfix
 										li 1
 										li 2
 										li 3
 										li 4
-										li(itemprop='ratingValue') 5
-										meta(itemprop='worstRating', content='1')
+										li(itemprop='rating') 5
+											meta(itemprop='worstRating', content='1')
 										meta(itemprop='bestRating', content='5')
-								li(itemprop='author')
+								li(itemprop='reviewer')
 									h4 Tiago Souza
 								li(itemprop='contentLocation')
 									h5 São Paulo / SP
-								li(itemprop='description')
-									p
+								li
+									p(itemprop='summary')
 										| “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
-						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
-							ul.outer.clearfix
-								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
-								ul.inner.clearfix
-									li 1
-									li 2
-									li 3
-									li 4
-									li(itemprop='ratingValue') 5
-									meta(itemprop='worstRating', content='1')
-									meta(itemprop='bestRating', content='5')
-								li(itemprop='author')
-									h4 Tiago Souza
-								li(itemprop='contentLocation')
-									h5 São Paulo / SP
-								li(itemprop='description')
-									p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
-						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
-							ul.outer.clearfix
-								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
-									ul.inner.clearfix
-										li 1
-										li 2
-										li 3
-										li(itemprop='ratingValue') 4
-										meta(itemprop='worstRating', content='1')
-										meta(itemprop='bestRating', content='5')
-								li(itemprop='author')
-									h4 Tiago Souza
-								li(itemprop='contentLocation')
-									h5 São Paulo / SP
-								li(itemprop='description')
-									p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
-						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
-							ul.outer.clearfix
-								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
-									ul.inner.clearfix
-										li 1
-										li 2
-										li 3
-										li 4
-										li(itemprop='ratingValue') 5
-										meta(itemprop='worstRating', content='1')
-										meta(itemprop='bestRating', content='5')
-								li(itemprop='author')
-									h4 Tiago Souza
-								li(itemprop='contentLocation')
-									h5 São Paulo / SP
-								li(itemprop='description')
-									p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
-						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
-							ul.outer.clearfix
-								li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
-									ul.inner.clearfix
-										li 1
-										li 2
-										li 3
-										li 4
-										li(itemprop='ratingValue') 5
-										meta(itemprop='worstRating', content='1')
-										meta(itemprop='bestRating', content='5')
-								li(itemprop='author')
-									h4 Tiago Souza
-								li(itemprop='contentLocation')
-									h5 São Paulo / SP
-								li(itemprop='description')
-									p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
-
-						li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
-									ul.outer.clearfix
-										li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
-											ul.inner.clearfix
-												li 1
-												li 2
-												li 3
-												li 4
-												li(itemprop='ratingValue') 5
-												meta(itemprop='worstRating', content='1')
-												meta(itemprop='bestRating', content='5')
-										li(itemprop='author')
-											h4 Tiago Souza
-										li(itemprop='contentLocation')
-											h5 São Paulo / SP
-										li(itemprop='description')
-											p | “Em documentos utilizados para testes, este tipo de texto é utilizado para evitar que as pessoas foquem a atenção no texto e se concentrem nos aspectos visuais.”
-				.media(itemprop='aggregateRating', itemscope='', itemtype='http://schema.org/AggregateRating')
+						.media
 					| Média de
-					span(itemprop='ratingValue') 4.5
+					span 4.5
 						| estrelas num total de
-					span(itemprop='reviewCount') 22
+					span 22
 						| opiniões.
 			a#cta.ancora(href='#quotation')
 				.inner Ver Cotações
