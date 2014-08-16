@@ -60,13 +60,13 @@ block content
 				.swiper-container.clearfix
 					ul#slides.swiper-wrapper.clearfix
 						each test, test_i in data.post.testimonials
-							li.swiper-slide(itemprop='review', itemscope='', itemtype='http://schema.org/Review')
+							li.swiper-slide(itemscope='', itemtype='http://data-vocabulary.org/Review')
 								ul.outer.clearfix
-									li(itemprop='reviewRating', itemscope='', itemtype='http://schema.org/Rating')
+									li
 										ul.inner.clearfix
 											- for(var i = 0; i < test.numberOfStars; ++i){
 												- if(i+1 == test.numberOfStars){
-													li(itemprop='ratingValue')=i+1
+													li(itemprop='rating')=i+1
 												-}
 												- else{
 													li=i+1
@@ -74,18 +74,23 @@ block content
 											- }
 											meta(itemprop='worstRating', content='1')
 											meta(itemprop='bestRating', content=test.numberOfStars)
-									li(itemprop='author')
+									li(itemprop='reviewer')
 										h4=test.name
 									li(itemprop='contentLocation')
 										h5=test.location
-									li(itemprop='description')
+									li(itemprop='summary')
 										p=test.testimony
-				.media(itemprop='aggregateRating', itemscope='', itemtype='http://schema.org/AggregateRating')
-					| Média de
-					span(itemprop='ratingValue') 4.5
-						| estrelas num total de
-					span(itemprop='reviewCount') 22
-						| opiniões.
+									li(itemprop='itemreviewed' style='display:none')
+										p Get Crédito Rápido
+							.media
+						| Média de
+						span(itemscope='' itemtype='http://data-vocabulary.org/Review-aggregate')
+							span(itemprop='rating' itemscope='' itemtype='http://data-vocabulary.org/Rating')
+								span(itemprop='average') 5
+									| estrelas num total de
+								span(itemprop='count') data.post.testimonials.count
+									| opiniões.
+								span(itemprop='best' style='display:none') 5
 			a#cta.ancora(href='#quotation')
 				.inner Ver Cotações
 		section#howitworks
