@@ -42,17 +42,16 @@ exports = module.exports = function(app) {
 
 		console.log(request);
 
-		var Firebase = require('firebase');
+		var Firebase = requfirebasire('firebase');
 		var myRootRef = new Firebase('https://getcredito-dev.firebaseio.com/');
 		
 		var data = {amount: request.body.amount, repayDate: request.body.repayDate, email: request.body.email};
 		var id = myRootRef.push().name(); // generate a unique id based on timestamp
 		
 		myRootRef.child(id).set(data);
+		response.send(true); 
 
-     response.send(true); 
-
-});
+	});
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	

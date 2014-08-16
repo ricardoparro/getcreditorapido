@@ -231,8 +231,7 @@ $.fn.serializeObject = function()
 
 function SaveLeadHead(){
 
-
-	$.post('/SaveLead', $('#formHead').serializeObject(), function(success){
+	$.post('/saveLead', $('#formHead').serializeObject(), function(success){
 
 		if(success){
 			alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
@@ -243,8 +242,7 @@ function SaveLeadHead(){
 
 function SaveLeadPage(){
 	
-	
-	$.post('/SaveLead', $('#formPage').serializeObject(), function(success){
+	$.post('/saveLead', $('#formPage').serializeObject(), function(success){
 
 		if(success){
 			alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');

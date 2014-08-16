@@ -4,20 +4,20 @@ block content
 	section#fixed
 		.wrapper
 			h2 Faça aqui a sua simulação
-			form(action='', method='post')
+			form(action='', method='post', id='formHead')
 				ul.clearfix
 					li
 						label=data.post.valueLoanLabel
-						input.text(type='text')
+						input.text(type='text', name='amount', id='amount')
 					li
 						label=data.post.numberOfMoths
-						input.text(type='text')
+						input.text(type='text', name='repayDate')
 					li
 						label=data.post.emailLabel
-						input.text(type='email')
+						input.text(type='email', name='email')
 					li
 						label.empty .
-						input.submit(type='submit', value=data.post.callToActionLabel)
+						input.submit(type='submit', value=data.post.callToActionLabel, onclick='SaveLeadHead();return false;')
 	header#quotation(name='quotation', itemscope='', itemtype='http://schema.org/Product')
 		.wrapper
 			.logo
@@ -25,19 +25,19 @@ block content
 				p= data.post.tagline
 			aside
 				h2= data.post.heading
-				form(action='', method='post')
+				form(action='', method='post', id='formPage')
 					ul
 						li
 							label=data.post.valueLoanLabel
-							input.text(type='text')
+							input.text(type='text', name='amount')
 						li
 							label=data.post.numberOfMoths
-							input.text(type='text')
+							input.text(type='text', name='repayDate')
 						li
 							label=data.post.emailLabel
-							input.text(type='email')
+							input.text(type='email', name='email')
 						li
-							input.submit(type='submit', value=data.post.callToActionLabel)
+							input.submit(type='submit', value=data.post.callToActionLabel, onclick='SaveLeadPage();return false;')
 
 	main
 		section#partners
