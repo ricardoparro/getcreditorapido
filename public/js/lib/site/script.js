@@ -231,15 +231,6 @@ $.fn.serializeObject = function()
 
 function SaveLeadHead(){
 
-	var isValid =$( "#formHead" ).validate({
-		rules: {
-			amount: {
-				required: true,
-				number: true
-			}
-		}
-	});
-alert(isValid);
 
 	$.post('/SaveLead', $('#formHead').serializeObject(), function(success){
 
@@ -251,15 +242,7 @@ alert(isValid);
 }
 
 function SaveLeadPage(){
-	$( "#formPage" ).validate({
-		rules: {
-			amount: {
-				required: true,
-				number: true
-			}
-		}
-	});
-alert(isValid);
+	
 	
 	$.post('/SaveLead', $('#formPage').serializeObject(), function(success){
 
