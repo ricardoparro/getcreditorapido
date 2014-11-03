@@ -229,20 +229,15 @@ $.fn.serializeObject = function()
    return o;
 };
 
-function SaveLeadHead(){
 
-	$.post('/saveLead', $('#formHead').serializeObject(), function(success){
+var GETAPP={};
 
-		if(success){
-			alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
-		}
+GETAPP.SaveLead = function(element){
 
-	});
-}
+	var submitButton= $(element);
+	var form = $(submitButton).parents('form:first');
 
-function SaveLeadPage(){
-	
-	$.post('/saveLead', $('#formPage').serializeObject(), function(success){
+	$.post('/saveLead', form.serializeObject(), function(success){
 
 		if(success){
 			alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
@@ -250,3 +245,4 @@ function SaveLeadPage(){
 
 	});
 }
+
