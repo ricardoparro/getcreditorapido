@@ -17,7 +17,7 @@ block content
 						input.text(type='email', name='email')
 					li
 						label.empty .
-						input.submit(type='submit', value=data.post.callToActionLabel, onclick='GETAPP.SaveShortLead(this);return false;')
+						input.submit(type='submit', value=data.post.callToActionLabel, onclick='GETAPP.saveLead(this);return false;')
 	header#quotation(name='quotation', itemscope='', itemtype='http://schema.org/Product')
 		.wrapper
 			.logo
@@ -37,7 +37,7 @@ block content
 							label=data.post.emailLabel
 							input.text(type='email', name='email')
 						li
-							input.submit(type='submit', value=data.post.callToActionLabel, onclick='GETAPP.SaveShortLead(this);return false;')
+							input.submit(type='submit', value=data.post.callToActionLabel, onclick='GETAPP.saveLead(this);return false;')
 
 	main
 		section#partners

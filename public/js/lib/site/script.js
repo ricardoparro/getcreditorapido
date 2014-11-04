@@ -239,19 +239,19 @@ if(typeof Object.create !== 'function'){
 	};
 }
 
+//Get app section
+
 var GETAPP={};
 
-GETAPP.saveLead = function(lead){
-	jQuery.post('/saveLead', lead, function(success){
-		if(success){
-			alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
-		}
-	});	
-};
-
-GETAPP.SaveShortLead = function(element){
-	var submitButton= $(element);
-	var form = $(submitButton).parents('form:first').serializeObject();
-	GETAPP.saveLead(form);
+GETAPP.saveLead = function(element){
+	var form = $(element).parents('form:first').serializeObject();
+	var recordLead = function(lead){
+		jQuery.post('/saveLead', lead, function(success){
+			if(success){
+				alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
+			}
+		});
+	};	
+	recordLead(form);
 }
 
