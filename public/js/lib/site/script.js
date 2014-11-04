@@ -241,32 +241,17 @@ if(typeof Object.create !== 'function'){
 
 var GETAPP={};
 
-GETAPP.lead = {
-	amount: 0,
-	repayDate: 'date',
-	email:'noEmail'
-}
-
 GETAPP.saveLead = function(lead){
-		
-		jQuery.post('/saveLead', lead, function(success){
-
-			if(success){
-				alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
-			}
-
-		});
-		
-	};
+	jQuery.post('/saveLead', lead, function(success){
+		if(success){
+			alert('Os seus dados foram submetidos com sucesso.Iremos entrar em contacto o mais rapido possivel');
+		}
+	});	
+};
 
 GETAPP.SaveShortLead = function(element){
 	var submitButton= $(element);
 	var form = $(submitButton).parents('form:first').serializeObject();
-
-	var leadToSave =  Object.create(GETAPP.lead);
-	leadToSave.amount = form.amount;
-	leadToSave.repayDate = form.repayDate;
-	leadToSave.email = form.email;
-	GETAPP.saveLead(leadToSave);
+	GETAPP.saveLead(form);
 }
 
